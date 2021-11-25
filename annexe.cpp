@@ -44,3 +44,10 @@ void put(const int tab[], size_t size){
 	}
 	cout << "]" << endl;
 }
+
+void tableNonSigneeABool (bool tableBooleen[], const unsigned tableNonSignee[],
+								  size_t tailleTableau) {
+	for (size_t i = 0ull; i < tailleTableau; ++i) {
+		tableBooleen[i] = bool(tableNonSignee[i]);
+	}
+}

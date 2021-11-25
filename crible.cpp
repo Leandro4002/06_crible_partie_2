@@ -71,16 +71,20 @@ void criblerTableau(unsigned tab[], unsigned taille){
    }
 }
 
-unsigned criblerTableau(bool tableBooleen[], unsigned taille) {
-	unsigned tableNonSignee[] = {};
+unsigned nbre1er(const bool tableCrible[], size_t tailleTableCrible,
+					  unsigned tablePremier[], size_t capaciteTablePremier) {
+	unsigned nomberDePremier = 0u;
 
-	criblerTableau(tableNonSignee, taille);
-	unsigned nbDePremier = combienNombrePremier(tableNonSignee, taille);
-	for (size_t i = 0ull; i < taille; ++i) {
-		tableBooleen[i] = bool(tableNonSignee[i]);
+	// On itère à travers tout les éléments de la table de crible
+	for (size_t i = 0ull; i < tailleTableCrible; ++i) {
+		// Si la valeur actuelle n'a pas été retiré par le crible d'Eratosthenes
+		if (tableCrible[i]) {
+			// Ajouter le nombre to the list of primes and increment the num of prime
+			tablePremier[nomberDePremier++] = unsigned(i) + 1u;
+		}
 	}
 
-	return nbDePremier;
+	return nomberDePremier;
 }
 
 // affiche les nombres par une croix ou cercle

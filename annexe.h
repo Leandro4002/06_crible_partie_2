@@ -42,4 +42,31 @@ void viderBuffer();
 //-------------------------------------------------------------------
 void finProgramme(const std::string& MSG_FIN);
 
+//-------------------------------------------------------------------
+// put
+//-------------------------------------------------------------------
+// Description: Affiche les éléments d'un tableau d'entiers.
+//
+// Paramètres:
+// Nom:
+// Nom:
+//
+// Retourne: -
+//-------------------------------------------------------------------
+void put(const int tab[], size_t size);
+
+//-------------------------------------------------------------------
+// tableNonSigneeABool
+//-------------------------------------------------------------------
+// Description: Convertit un tableau non signé vers un tableau booléen
+//
+// Paramètres:
+// Nom:
+// Nom:
+//
+// Retourne: -
+//-------------------------------------------------------------------
+void tableNonSigneeABool (bool tableBooleen[], const unsigned tableNonSignee[],
+								  size_t tailleTableau);
+
 #endif //MAIN_CPP_ANNEXE_H

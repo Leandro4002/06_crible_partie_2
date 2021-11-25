@@ -79,6 +79,14 @@ int main() {
    //-----------------------------------------------------------------------
    afficheNombrePremier(tableauCrible, tailleTableauCrible);
 
+	//-----------------------------------------------------------------------
+	// Partie 2 du labo
+	//-----------------------------------------------------------------------
+	cout << "complement..." << endl;
+	bool tableauCribleBool[tailleTableauCrible];
+	tableNonSigneeABool(tableauCribleBool, tableauCrible, tailleTableauCrible);
+	//nbre1er();
+
    //-----------------------------------------------------------------------
    // Fin du programme
    //-----------------------------------------------------------------------

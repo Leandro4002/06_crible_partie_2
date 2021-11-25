@@ -115,4 +115,20 @@ unsigned combienNombrePremier(const unsigned tab[], unsigned taille);
 //-------------------------------------------------------------------
 void afficheNombrePremier(const unsigned tab[], unsigned taille);
 
+
+//-------------------------------------------------------------------
+// nbre1er
+//-------------------------------------------------------------------
+// Description: Extrait les nombres premiers à partir d'un tableau de
+// crible booléen
+//
+// Paramètres:
+// Nom:
+// Nom:
+//
+// Retourne: -
+//-------------------------------------------------------------------
+unsigned nbre1er(const bool tableCrible[], size_t tailleTableCrible,
+					  unsigned tablePremier[], size_t capaciteTablePremier);
+
 #endif //MAIN_CPP_CRIBLE_H
