@@ -6,6 +6,8 @@
   Date        : 19.11.2021
    But         : Fichier de définitions des sous-programmes utilisés pour la
                 demonstration du crible d'Eratosthène
+  Modifs      : Leandro S.M et Miguel J. 2021-11-25
+                - Ajout d'une fonction crible qui prend en charge des booléens
 
   Remarque(s) : Les nombres non premiers sont mis à zéro lors du criblage.
 
@@ -52,6 +54,7 @@ void criblerTableau(unsigned tab[], unsigned taille){
    ++pos;
 
    // Pour toutes les positions du tableau dont l'élément est différent de 0
+	// TODO Changer cette condition qui est fausse
    for(; (tab[pos] * tab[pos]) <= taille; ++pos){
       if(tab[pos] != 0){
          multiple =  tab[pos];
@@ -66,6 +69,18 @@ void criblerTableau(unsigned tab[], unsigned taille){
          }
       }
    }
+}
+
+unsigned criblerTableau(bool tableBooleen[], unsigned taille) {
+	unsigned tableNonSignee[] = {};
+
+	criblerTableau(tableNonSignee, taille);
+	unsigned nbDePremier = combienNombrePremier(tableNonSignee, taille);
+	for (size_t i = 0ull; i < taille; ++i) {
+		tableBooleen[i] = bool(tableNonSignee[i]);
+	}
+
+	return nbDePremier;
 }
 
 // affiche les nombres par une croix ou cercle
