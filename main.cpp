@@ -9,6 +9,9 @@
                 le crible et une nouvelle après crible. Enfin, il affiche le
                 nombre total de nombres premiers ainsi que la liste de ces
                 derniers.
+  Modifs      : Leandro S.M et Miguel J. 2021-11-26
+                - Ajout d'une fonctionnalité qui utilise un tableau de
+                booléen à la place d'un tableau d'unsigned
 
   Remarque(s) : Ce programme est subdivisé en plusieurs fichiers:
                 - 1 librairie mettant à dispo les ss-prgm utile à la gestion
@@ -83,9 +86,17 @@ int main() {
 	// Partie 2 du labo
 	//-----------------------------------------------------------------------
 	cout << "complement..." << endl;
-	bool tableauCribleBool[tailleTableauCrible];
+	bool tableauCribleBool[MAX_VALEUR];
+	unsigned tableauNbre1er[MAX_VALEUR];
+	size_t tailleNbre1er;
+
+	// On convertit le tableau non signé généré vers un bool. On extrait ensuite
+	// les nombres premiers de ce tableau de bool et on les affiche
 	tableNonSigneeABool(tableauCribleBool, tableauCrible, tailleTableauCrible);
-	//nbre1er();
+	tailleNbre1er = nbre1er(tableauCribleBool, tailleTableauCrible,
+									tableauNbre1er, MAX_VALEUR);
+	put(tableauNbre1er, tailleNbre1er);
+	cout << endl;
 
    //-----------------------------------------------------------------------
    // Fin du programme

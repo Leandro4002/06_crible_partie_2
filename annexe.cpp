@@ -8,7 +8,8 @@
 
   Modifs      : Leandro S.M et Miguel J. 2021-11-25
                 - Ajout de la fonction d'affichage 'put' pour afficher un tableau
-                  d'entiers sur une seule ligne
+                  d'entiers sur une seule ligne et de la fonction
+                  'tableNonSigneeABool' pour convertir unsigned[] à bool[]
 
   Remarque(s) : -
 
@@ -34,15 +35,15 @@ void finProgramme(const string& MSG_FIN){
    exit(EXIT_SUCCESS);
 }
 
-void put(const int tab[], size_t size){
-	cout << "[";
-	for(size_t i = 0; i < size; ++i){
+void put(const unsigned tab[], size_t size){
+	cout << '[';
+	for(size_t i = 0ull; i < size; ++i){
 		cout << tab[i];
-		if(i != size-1){
+		if(i != size - 1ull){
 			cout << ", ";
 		}
 	}
-	cout << "]" << endl;
+	cout << ']';
 }
 
 void tableNonSigneeABool (bool tableBooleen[], const unsigned tableNonSignee[],

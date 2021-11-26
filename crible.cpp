@@ -4,10 +4,11 @@
   Nom du labo : Labo_crible_GroupeO
   Auteur(s)   : Emilie Bressoud & Bastien Pillonel
   Date        : 19.11.2021
-   But         : Fichier de définitions des sous-programmes utilisés pour la
+  But         : Fichier de définitions des sous-programmes utilisés pour la
                 demonstration du crible d'Eratosthène
-  Modifs      : Leandro S.M et Miguel J. 2021-11-25
-                - Ajout d'une fonction crible qui prend en charge des booléens
+  Modifs      : Leandro S.M et Miguel J. 2021-11-26
+                - Ajout d'une fonction pour extraire les nombres premiers à
+                  partir d'un tableau de crible booléen
 
   Remarque(s) : Les nombres non premiers sont mis à zéro lors du criblage.
 
@@ -20,6 +21,7 @@
 #include <iostream>
 #include <iomanip>
 #include <string>
+#include <cassert>  // Required for assert
 
 using namespace std;
 
@@ -79,8 +81,12 @@ unsigned nbre1er(const bool tableCrible[], size_t tailleTableCrible,
 	for (size_t i = 0ull; i < tailleTableCrible; ++i) {
 		// Si la valeur actuelle n'a pas été retiré par le crible d'Eratosthenes
 		if (tableCrible[i]) {
-			// Ajouter le nombre to the list of primes and increment the num of prime
+			// Ajoute le nombre au tableau des nombres premiers et incrémente le
+			// nombre de nombres premiers.
 			tablePremier[nomberDePremier++] = unsigned(i) + 1u;
+
+			// Test si le tableau de nombres premiers a assez de place pour tout stocker
+			assert(nomberDePremier <= capaciteTablePremier);
 		}
 	}
 

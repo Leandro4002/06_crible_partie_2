@@ -6,6 +6,9 @@
   Date        : 19.11.2021
   But         : Fichier de déclaration des sous-programme utilisés pour la
                 demonstration du crible d'Eratosthène
+  Modifs      : Leandro S.M et Miguel J. 2021-11-26
+                - Ajout d'une fonction pour extraire les nombres premiers à
+                  partir d'un tableau de crible booléen
 
   Remarque(s) : -
 

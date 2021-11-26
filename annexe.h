@@ -5,6 +5,10 @@
   Auteur(s)   : Emilie Bressoud & Bastien Pillonel
   Date        : 19.11.2021
   But         : Fichier de déclaration des sous-programme annexes
+  Modifs      : Leandro S.M et Miguel J. 2021-11-25
+                - Ajout de la fonction d'affichage 'put' pour afficher un tableau
+                  d'entiers sur une seule ligne et de la fonction
+                  'tableNonSigneeABool' pour convertir unsigned[] à bool[]
 
   Remarque(s) : -
 
@@ -53,7 +57,7 @@ void finProgramme(const std::string& MSG_FIN);
 //
 // Retourne: -
 //-------------------------------------------------------------------
-void put(const int tab[], size_t size);
+void put(const unsigned tab[], size_t size);
 
 //-------------------------------------------------------------------
 // tableNonSigneeABool
