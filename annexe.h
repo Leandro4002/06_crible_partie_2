@@ -50,10 +50,10 @@ void finProgramme(const std::string& MSG_FIN);
 // put
 //-------------------------------------------------------------------
 // Description: Affiche les éléments d'un tableau d'entiers.
-//
+//              Avec format [x, x, x]
 // Paramètres:
-// Nom:
-// Nom:
+// Nom:         tab[]   est le tableau à afficher
+// Nom:         size    est la taille du tableau
 //
 // Retourne: -
 //-------------------------------------------------------------------
@@ -63,10 +63,12 @@ void put(const unsigned tab[], size_t size);
 // tableNonSigneeABool
 //-------------------------------------------------------------------
 // Description: Convertit un tableau non signé vers un tableau booléen
-//
+//              Toute valeur non nulle devient 1 et le autres 0
 // Paramètres:
-// Nom:
-// Nom:
+// Nom:         tableBooleen[]   tableau booleen vide utilisé comme resultat de
+//                               fonction
+// Nom:         tableNonSignee   tableau unsigned a traiter
+// Nom:         tailleTableau    taille tu tableau non signé
 //
 // Retourne: -
 //-------------------------------------------------------------------
