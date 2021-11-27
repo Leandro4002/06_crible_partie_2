@@ -56,7 +56,6 @@ void criblerTableau(unsigned tab[], unsigned taille){
    ++pos;
 
    // Pour toutes les positions du tableau dont l'élément est différent de 0
-	// TODO Changer cette condition qui est fausse
    for(; (tab[pos] * tab[pos]) <= taille; ++pos){
       if(tab[pos] != 0){
          multiple =  tab[pos];
