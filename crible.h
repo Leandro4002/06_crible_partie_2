@@ -126,10 +126,12 @@ void afficheNombrePremier(const unsigned tab[], unsigned taille);
 // crible booléen
 //
 // Paramètres:
-// Nom:
-// Nom:
+// Nom:         tableCrible            tableau de booléen rempli
+// Nom:         tailleTableCrible      Taille du tableau de booleen
+// Nom:         tablePremier           tableau de nombre entiers a remplir
+// Nom:         capaciteTablePremier   Capacité du tableau de nombre premiers
 //
-// Retourne: -
+// Retourne: la taille du tableau d'entiers premiers
 //-------------------------------------------------------------------
 unsigned nbre1er(const bool tableCrible[], size_t tailleTableCrible,
 					  unsigned tablePremier[], size_t capaciteTablePremier);
